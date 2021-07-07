@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Exchange Rates<h1>
+            <h2>Live Exchanage Rates To Buy/Sell CryptoCurrency Via The Nigerian Naira</h2>
+                <table style="width:100%" border="1">
+                  <tr>
+                    <th>Currency</th>
+                    <th>Abbreviation</th>
+                    <th>Price</th>
+                  </tr>
+                  <tr>
+                    <td>Bitcoin</td>
+                    <td>BTC</td>
+                    <td>{{ output }}</td>
+                  </tr>
+                    <tr>
+                    <td>Ethereum</td>
+                    <td>ETH</td>
+                    <td>{{ output_1 }}</td>
+                  </tr>
+                  <tr>
+                    <td>Cardano</td>
+                    <td>ADA</td>
+                    <td>{{ output_2 }}</td>
+                  </tr>
+                  <tr>
+                    <td>Ripple</td>
+                    <td>XRP</td>
+                    <td>{{ output_3 }}</td>
+                  </tr>
+                  <tr>
+                    <td>ChainLink</td>
+                    <td>LINK</td>
+                    <td>{{ output_4 }}</td>
+                  </tr>
+                  <tr>
+                    <td>Polkadot</td>
+                    <td>Dot</td>
+                    <td>{{ output_5 }}</td>
+                  </tr>
+                  <tr>
+                    <td>LiteCoin</td>
+                    <td>LTC</td>
+                    <td>{{ output_6 }}</td>
+                  </tr>
+                </table>
+
+{% endblock content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {% if title %}
+        <title>Horizon - {{title}}</title>
+    {% else %}
+        <title>Horizon</title>
+    {% endif %}
+</head>
+<body>
+
+</body>
+</html>

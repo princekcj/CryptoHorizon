@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+<div style="text-align:center">
+    <h1>Horizon Wallet</h1>
+        <div class="container" style="width:600px">
+            <div class="card" style="margin-bottom:20px ; margin-top:20px; background-color:lightblue">
+                <div class="card header">
+                    <legend style="font-size:40px">E-Wallet</legend>
+                </div>
+                              <div class="card-row" style="margin-top:30px;font-size:20px">
+                                    <label>Account Name</label>
+                                        <a>- {{ current_user.username }}</a>
+                              </div>
+                                <div class="card-row" style="margin-top:30px;font-size:20px">
+                                        <label>Currency</label>
+                                            <a>- Ethereum</a>
+                                </div>
+                                <div class="card-row" style="margin-top:30px;font-size:20px">
+                                        <label>Account Balance</label>
+                                            <a>&#8373 {{ bal }}</a>
+                                </div>
+                                 <div  style="text-align:center; margin-top:30px; background-color:lightgreen" >
+                                         <a class="btn btn-outline-info" type="button"  style="text-align:center; " href="{{ url_for('topup') }}">Top Up Balance</a>
+                                 </div>
+            </div>
+        </div>
+</div>
+{% endblock content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {% if title %}
+        <title>Horizon - {{title}}</title>
+    {% else %}
+        <title>Horizon</title>
+    {% endif %}
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>About & News<h1>
+            <h2> Cross-Border Payments Across Africa </h2>
+                <body>
+                    This web application's focus to to bring fast and effective cross border payments between account holders.
+                    You may send the payment in the account holders local currency.
+                </body>
+ {% for post in posts %}
+    <article class="media content-section" style="margin-top:100px" >
+      <div class="media-body">
+          <legend>New Post</legend>
+        <div class="article-metadata">
+          <a class="mr-2" href="#">{{ post.author }}</a>
+          <small class="text-muted">{{ post.date_posted }}</small>
+        </div>
+        <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+        <p class="article-content">{{ post.content }}</p>
+      </div>
+    </article>
+    {% endfor %}
+{% endblock content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {% if title %}
+        <title>Horizon - {{title}}</title>
+    {% else %}
+        <title>Horizon</title>
+    {% endif %}
+</head>
+<body>
+
+</body>
+</html>
